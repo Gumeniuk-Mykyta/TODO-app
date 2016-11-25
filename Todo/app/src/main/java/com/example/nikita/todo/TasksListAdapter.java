@@ -46,13 +46,18 @@ public class TasksListAdapter extends BaseAdapter {
         }
         Task task = tasksList.get(position);
         if (task.getStatus() == Task.Status.COMPLETED) {
-            taskView.setBackgroundColor(taskView.getResources().getColor(R.color.completedTask));
+            taskView.findViewById(R.id.item_status_icon).setBackgroundResource(R.mipmap.status_completed);
+//            taskView.setBackgroundColor(taskView.getResources().ge
+// tColor(R.color.completedTask));
         }
         if (task.getStatus() == Task.Status.IN_PROCESS) {
-            taskView.setBackgroundColor(taskView.getResources().getColor(R.color.inProcessTask));
+            taskView.findViewById(R.id.item_status_icon).setBackgroundResource(R.mipmap.status_in_process);
+//            taskView.setBackgroundColor(taskView.getResources().getColor(R.color.inProcessTask));
+
         }
         if (task.getStatus() == Task.Status.UNCOMPLETED) {
-            taskView.setBackgroundColor(taskView.getResources().getColor(R.color.uncompletedTask));
+            taskView.findViewById(R.id.item_status_icon).setBackgroundResource(R.mipmap.status_uncompleted);
+//            taskView.setBackgroundColor(taskView.getResources().getColor(R.color.uncompletedTask));
         }
         TextView taskName = (TextView) taskView.findViewById(R.id.taskName);
         TextView taskDate = (TextView) taskView.findViewById(R.id.taskDate);

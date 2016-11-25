@@ -1,51 +1,59 @@
 package com.example.nikita.todo;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v4.view.ViewCompat;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.ContextMenu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.view.animation.LinearInterpolator;
 import android.widget.AdapterView;
 import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.support.v7.app.ActionBar;
+
+import com.afollestad.materialdialogs.MaterialDialog;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Random;
-import java.util.zip.Inflater;
 
-public class MainActivityListView extends Activity {
+public class MainActivityListView extends AppCompatActivity {
+    TextView TVSortBy;
+    TextView TVAddANewTask;
+    FloatingActionButton fabMain;
+    FloatingActionButton fabSecond;
+    FloatingActionButton fabThird;
+    Animation fabOpen;
+    Animation fabClose;
+    Animation rotateClockWise;
+    Animation rotateAnticlockwise;
+    boolean isFabMenuOpen = false;
     static private ArrayList<Task> tasksList = new ArrayList<>();
-
-
     static private boolean wasLaunched = false;
-
     static public TasksListAdapter tasksListAdapter;
-
     static public ListView taskListView;
-
     static public String nameOfTask;
-
     static public boolean isTaskBeingEdited;
-
     public ArrayList<Task> getTasksList() {
         return tasksList;
     }
-
     public void setTasksList(ArrayList<Task> tasksList) {
         this.tasksList = tasksList;
     }
-
     static public AdapterView.AdapterContextMenuInfo info;
 
 
@@ -53,6 +61,8 @@ public class MainActivityListView extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.listview_main);
+        initActionBar();
+        initFabMenu();
         if (wasLaunched == false) {
             createTasks();
         }
@@ -63,6 +73,79 @@ public class MainActivityListView extends Activity {
         Log.i("taskList size :", String.valueOf(tasksList.size()));
         registerForContextMenu(findViewById(R.id.itemListView));
         wasLaunched = true;
+    }
+
+    private void initFabMenu(){
+        fabMain = (FloatingActionButton) findViewById(R.id.fab_main);
+        fabSecond = (FloatingActionButton) findViewById(R.id.fab_second);
+        fabThird = (FloatingActionButton) findViewById(R.id.fab_third);
+        fabOpen = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fab_open);
+        fabClose = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fab_close);
+        rotateAnticlockwise = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.rotate_anticlockwise);
+        rotateClockWise= AnimationUtils.loadAnimation(getApplicationContext(), R.anim.rotate_clockwise);
+        TVSortBy = (TextView) findViewById(R.id.tv_sort_by);
+        TVAddANewTask = (TextView) findViewById(R.id.tv_add_a_new_task);
+    }
+
+    private void initActionBar() {
+       ActionBar actionBar = getSupportActionBar();
+        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+        actionBar.addTab(actionBar.newTab()
+        .setText("All tasks")
+        .setTabListener(new ActionBar.TabListener() {
+            @Override
+            public void onTabSelected(ActionBar.Tab tab, FragmentTransaction ft) {
+                Toast.makeText(getApplicationContext(),"all tasks tab was selected",Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onTabUnselected(ActionBar.Tab tab, FragmentTransaction ft) {
+
+            }
+
+            @Override
+            public void onTabReselected(ActionBar.Tab tab, FragmentTransaction ft) {
+
+            }
+        }));
+        actionBar.addTab(actionBar.newTab()
+        .setText("Today's tasks")
+        .setTabListener(new ActionBar.TabListener() {
+            @Override
+            public void onTabSelected(ActionBar.Tab tab, FragmentTransaction ft) {
+                Toast.makeText(getApplicationContext(),"today's tasks tab was selected",Toast.LENGTH_SHORT).show();
+
+            }
+
+            @Override
+            public void onTabUnselected(ActionBar.Tab tab, FragmentTransaction ft) {
+
+            }
+
+            @Override
+            public void onTabReselected(ActionBar.Tab tab, FragmentTransaction ft) {
+
+            }
+        }));
+        actionBar.addTab(actionBar.newTab()
+        .setText("Completed")
+        .setTabListener(new ActionBar.TabListener() {
+            @Override
+            public void onTabSelected(ActionBar.Tab tab, FragmentTransaction ft) {
+
+            }
+
+            @Override
+            public void onTabUnselected(ActionBar.Tab tab, FragmentTransaction ft) {
+
+            }
+
+            @Override
+            public void onTabReselected(ActionBar.Tab tab, FragmentTransaction ft) {
+
+            }
+        }));
+
     }
 
     public static void fillList() {
@@ -122,6 +205,36 @@ public class MainActivityListView extends Activity {
     private void showDatePickerDialog() {
         DialogFragment datePickerDialogFragment = new DatePickerDialog();
         datePickerDialogFragment.show(getFragmentManager(), "DatePickerDialog");
+    }
+
+    public void onFabButtonClick(View view) {
+        switch (view.getId()) {
+            case R.id.fab_main:
+                if (isFabMenuOpen){
+                    ViewCompat.animate(fabMain).rotation(0.0F).withLayer().setDuration(300).setInterpolator(new LinearInterpolator()).start();
+                    fabSecond.startAnimation(fabClose);
+                    fabThird.startAnimation(fabClose);
+                    TVAddANewTask.startAnimation(fabClose);
+                    TVSortBy.startAnimation(fabClose);
+                    fabSecond.setClickable(false);
+                    fabThird.setClickable(false);
+                    TVAddANewTask.setClickable(false);
+                    TVSortBy.setClickable(false);
+                    isFabMenuOpen = false;
+                }else{
+                    ViewCompat.animate(fabMain).rotation(90.0F).withLayer().setDuration(300).setInterpolator(new LinearInterpolator()).start();
+                    fabSecond.startAnimation(fabOpen);
+                    fabThird.startAnimation(fabOpen);
+                    TVAddANewTask.startAnimation(fabOpen);
+                    TVSortBy.startAnimation(fabOpen);
+                    fabSecond.setClickable(true);
+                    fabThird.setClickable(true);
+                    TVAddANewTask.setClickable(true);
+                    TVSortBy.setClickable(true);
+                    isFabMenuOpen = true;
+                }
+                break;
+        }
     }
 
 
@@ -219,6 +332,11 @@ public class MainActivityListView extends Activity {
 
     private void openEditTaskDialog() {
         final EditText ETNameOfTask = new EditText(this);
+//        new MaterialDialog.Builder(this)
+//                .positiveText("Choose Date")
+//                .title("Enter the name of a task")
+//                .content("sfddsfdsfdsfkdshfk jsdjflsdjfldsjkfsd")
+//                .show();
         ETNameOfTask.setText(tasksList.get(info.position).getName());
         new AlertDialog.Builder(this)
                 .setMessage("Enter the name of a task")
