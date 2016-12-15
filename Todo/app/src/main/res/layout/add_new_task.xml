@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Name of the task"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="task example"
+        />
+    android:textColor="#ffffff"
+    android:textSize="17dp"
+
+</LinearLayout>
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Date of the task"/>-->
+
+    <!--<EditText-->
+        <!--android:id="@+id/dateET"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="12.05.2015"-->
+        <!--android:textSize="17dp"-->
+        <!--android:onClick="onClick"-->
+        <!--/>-->
+        <!--android:textColor="#ffffff"-->
