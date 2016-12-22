@@ -1,6 +1,6 @@
-package com.example.nikita.todo;
+package com.google.mykytagumeniuk.todo;
 
-import android.app.*;
+import android.app.Activity;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -16,10 +16,11 @@ import com.wdullaer.materialdatetimepicker.time.TimePickerDialog;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
+import static com.google.mykytagumeniuk.todo.MainActivityListView.isTaskBeingEdited;
+import static com.google.mykytagumeniuk.todo.MainActivityListView.nameOfTask;
+import static com.google.mykytagumeniuk.todo.MainActivityListView.uncompletedTasksList;
+
 //import static AddOrEditTaskActivity.dateOfTaskTV;
-import static com.example.nikita.todo.MainActivityListView.isTaskBeingEdited;
-import static com.example.nikita.todo.MainActivityListView.nameOfTask;
-import static com.example.nikita.todo.MainActivityListView.uncompletedTasksList;
 
 /**
  * Created by Nikita on 11/26/2016.
@@ -28,7 +29,7 @@ import static com.example.nikita.todo.MainActivityListView.uncompletedTasksList;
 public class DialogsManager {
     public static AddOrEditTaskActivity addOrEditTaskActivity = new AddOrEditTaskActivity();
 
-    private static final java.lang.String FRAG_TAG_DATE_PICKER = "CalendarDatePicker";
+    private static final String FRAG_TAG_DATE_PICKER = "CalendarDatePicker";
 
     public static void openEditTaskDialog(final Activity activity, final Context context, final int id) {
         final EditText ETNameOfTask = new EditText(context);

@@ -1,4 +1,4 @@
-package com.example.nikita.todo;
+package com.google.mykytagumeniuk.todo;
 
 import android.app.Activity;
 import android.content.Context;
@@ -7,10 +7,10 @@ import android.support.design.widget.FloatingActionButton;
 import android.view.View;
 import android.widget.TextView;
 
-import static com.example.nikita.todo.AddOrEditTaskActivity.isAddTaskSelected;
-import static com.example.nikita.todo.MainActivityListView.completedTasksList;
-import static com.example.nikita.todo.MainActivityListView.todayTasksList;
-import static com.example.nikita.todo.MainActivityListView.uncompletedTasksList;
+import static com.google.mykytagumeniuk.todo.AddOrEditTaskActivity.isAddTaskSelected;
+import static com.google.mykytagumeniuk.todo.MainActivityListView.completedTasksList;
+import static com.google.mykytagumeniuk.todo.MainActivityListView.todayTasksList;
+import static com.google.mykytagumeniuk.todo.MainActivityListView.uncompletedTasksList;
 
 /**
  * Created by Nikita on 11/26/2016.

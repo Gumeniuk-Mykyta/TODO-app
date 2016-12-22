@@ -1,4 +1,4 @@
-package com.example.nikita.todo;
+package com.google.mykytagumeniuk.todo;
 
 import android.app.Activity;
 import android.app.Dialog;
@@ -11,11 +11,12 @@ import com.afollestad.materialdialogs.MaterialDialog;
 
 import java.util.ArrayList;
 
-import static com.example.nikita.todo.AddOrEditTaskActivity.idOfTask;
-import static com.example.nikita.todo.AddOrEditTaskActivity.isAddTaskSelected;
-import static com.example.nikita.todo.ChangeStatusDialog.showChangeStatusDialog;
+import static com.google.mykytagumeniuk.todo.AddOrEditTaskActivity.idOfTask;
+import static com.google.mykytagumeniuk.todo.AddOrEditTaskActivity.isAddTaskSelected;
+import static com.google.mykytagumeniuk.todo.ChangeStatusDialog.showChangeStatusDialog;
+import static com.google.mykytagumeniuk.todo.MainActivityListView.tasksListAdapter;
+
 //import static EditTaskDialog.openAddOrEditTaskActivity;
-import static com.example.nikita.todo.MainActivityListView.tasksListAdapter;
 
 /**
  * Created by Nikita on 11/29/2016.

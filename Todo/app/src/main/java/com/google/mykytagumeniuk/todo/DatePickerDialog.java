@@ -1,4 +1,4 @@
-package com.example.nikita.todo;
+package com.google.mykytagumeniuk.todo;
 
 import android.app.Activity;
 import android.app.Dialog;
@@ -10,12 +10,12 @@ import android.widget.DatePicker;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-import static com.example.nikita.todo.MainActivityListView.fillList;
-import static com.example.nikita.todo.MainActivityListView.info;
-import static com.example.nikita.todo.MainActivityListView.isTaskBeingEdited;
-import static com.example.nikita.todo.MainActivityListView.nameOfTask;
-import static com.example.nikita.todo.MainActivityListView.uncompletedTasksList;
-import static com.example.nikita.todo.MainActivityListView.tasksListAdapter;
+import static com.google.mykytagumeniuk.todo.MainActivityListView.fillList;
+import static com.google.mykytagumeniuk.todo.MainActivityListView.info;
+import static com.google.mykytagumeniuk.todo.MainActivityListView.isTaskBeingEdited;
+import static com.google.mykytagumeniuk.todo.MainActivityListView.nameOfTask;
+import static com.google.mykytagumeniuk.todo.MainActivityListView.tasksListAdapter;
+import static com.google.mykytagumeniuk.todo.MainActivityListView.uncompletedTasksList;
 
 /**
  * Created by Nikita on 11/29/2016.

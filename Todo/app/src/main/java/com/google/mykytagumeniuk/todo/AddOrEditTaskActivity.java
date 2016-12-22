@@ -1,8 +1,8 @@
-package com.example.nikita.todo;
+package com.google.mykytagumeniuk.todo;
 
 import android.app.Activity;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -12,8 +12,8 @@ import com.afollestad.materialdialogs.MaterialDialog;
 
 import java.util.ArrayList;
 
-import static com.example.nikita.todo.MainActivityListView.completedTasksList;
-import static com.example.nikita.todo.MainActivityListView.tasksListAdapter;
+import static com.google.mykytagumeniuk.todo.MainActivityListView.completedTasksList;
+import static com.google.mykytagumeniuk.todo.MainActivityListView.tasksListAdapter;
 
 public class AddOrEditTaskActivity extends AppCompatActivity {
     public static boolean isAddTaskSelected;

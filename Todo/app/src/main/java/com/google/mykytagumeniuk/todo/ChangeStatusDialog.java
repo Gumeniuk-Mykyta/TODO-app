@@ -1,4 +1,4 @@
-package com.example.nikita.todo;
+package com.google.mykytagumeniuk.todo;
 
 import android.app.Activity;
 import android.app.Dialog;
@@ -13,8 +13,9 @@ import com.afollestad.materialdialogs.MaterialDialog;
 
 import java.util.ArrayList;
 
+import static com.google.mykytagumeniuk.todo.MainActivityListView.tasksListAdapter;
+
 //import static AddOrEditTaskActivity.dateOfTaskTV;
-import static com.example.nikita.todo.MainActivityListView.tasksListAdapter;
 
 /**
  * Created by Nikita on 11/29/2016.

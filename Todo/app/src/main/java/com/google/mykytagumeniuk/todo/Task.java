@@ -1,4 +1,4 @@
-package com.example.nikita.todo;
+package com.google.mykytagumeniuk.todo;
 
 import android.os.Parcel;
 import android.os.Parcelable;

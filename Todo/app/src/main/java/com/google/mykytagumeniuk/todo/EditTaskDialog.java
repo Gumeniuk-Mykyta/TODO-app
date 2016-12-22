@@ -1,4 +1,4 @@
-package com.example.nikita.todo;
+package com.google.mykytagumeniuk.todo;
 
 import android.app.Activity;
 import android.app.Dialog;
@@ -17,10 +17,10 @@ import com.afollestad.materialdialogs.MaterialDialog;
 
 import java.util.ArrayList;
 
-import static com.example.nikita.todo.DialogsManager.showCalendarDialog;
-import static com.example.nikita.todo.MainActivityListView.isTaskBeingEdited;
-import static com.example.nikita.todo.MainActivityListView.nameOfTask;
-import static com.example.nikita.todo.MainActivityListView.uncompletedTasksList;
+import static com.google.mykytagumeniuk.todo.DialogsManager.showCalendarDialog;
+import static com.google.mykytagumeniuk.todo.MainActivityListView.isTaskBeingEdited;
+import static com.google.mykytagumeniuk.todo.MainActivityListView.nameOfTask;
+import static com.google.mykytagumeniuk.todo.MainActivityListView.uncompletedTasksList;
 
 /**
  * Created by Nikita on 11/30/2016.

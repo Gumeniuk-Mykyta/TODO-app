@@ -1,4 +1,4 @@
-package com.example.nikita.todo;
+package com.google.mykytagumeniuk.todo;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -13,10 +13,10 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Random;
 
-import static com.example.nikita.todo.ActionBar.initActionBar;
-import static com.example.nikita.todo.DialogsManager.showCalendarDialog;
-import static com.example.nikita.todo.FABMenuManager.initFabMenu;
-import static com.example.nikita.todo.FABMenuManager.onFABButtonClick;
+import static com.google.mykytagumeniuk.todo.ActionBar.initActionBar;
+import static com.google.mykytagumeniuk.todo.DialogsManager.showCalendarDialog;
+import static com.google.mykytagumeniuk.todo.FABMenuManager.initFabMenu;
+import static com.google.mykytagumeniuk.todo.FABMenuManager.onFABButtonClick;
 
 public class MainActivityListView extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.example.nikita.todo;
+package com.google.mykytagumeniuk.todo;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
