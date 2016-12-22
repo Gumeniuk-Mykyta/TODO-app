@@ -16,36 +16,73 @@
         android:orientation="vertical">
 
 
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Name of the task"/>
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="task example"
-        />
-
-    <TextView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="Date of the task"/>
-
-    <EditText
-    android:id="@+id/dateET"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="12.05.2015"
-    android:textSize="17dp"
-    />
-    android:onClick="onClick"
-        <Button
-            android:id="@+id/button"
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:onClick="onClick"/>
-    android:textColor="#ffffff"
+            android:layout_height="wrap_content"
+            android:text="Name of the task" />
+
+        <EditText
+            android:id="@+id/nameOfTaskET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="task example" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Date of the task" />
+
+        <TextView
+            android:id="@+id/dateOfTaskTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:onClick="onClick"
+            android:text="12.05.2015"
+            android:textColor="#000000"
+            android:textSize="17dp" />
+
+        <View
+            android:id="@+id/lineBelowDateOfTask"
+            android:layout_width="340dp"
+            android:layout_height="2dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="2dp"
+            android:background="#000000"
+            android:onClick="onClick" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Time of the task" />
+
+        <TextView
+            android:id="@+id/timeOfTaskTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:onClick="onClick"
+            android:text="12.05.2015"
+            android:textColor="#000000"
+            android:textSize="17dp" />
+
+        <View
+            android:id="@+id/lineBelowTimeOfTask"
+            android:layout_width="335dp"
+            android:layout_height="2dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="2dp"
+            android:background="#000000"
+            android:onClick="onClick" />
+        android:onClick="onClick"
+
+        <Button
+            android:id="@+id/addOrEditTaskButton"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:text="Add task"
+            android:layout_height="48dp"
+            android:onClick="onClick" />
+        android:textColor="#ffffff"
     </LinearLayout>
 </RelativeLayout>

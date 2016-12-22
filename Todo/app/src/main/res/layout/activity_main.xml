@@ -14,11 +14,11 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:text="New Button"
-        android:id="@+id/button"
+        android:id="@+id/addOrEditTaskButton"
         android:layout_gravity="center_horizontal"
         android:layout_alignParentBottom="true" />
 <ScrollView
-    android:layout_above="@id/button"
+    android:layout_above="@id/addOrEditTaskButton"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
     <LinearLayout

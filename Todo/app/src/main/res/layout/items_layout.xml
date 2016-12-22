@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginBottom="10dp"
+    android:background="@drawable/background"
     android:layout_marginTop="10dp"
     android:layout_weight="1"
     android:orientation="horizontal">
@@ -12,9 +13,9 @@
         android:id="@+id/item_status_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="15dp"
         />
-        android:src="@mipmap/status_in_process"
+        android:src="@mipmap/new_completed"
 
 <LinearLayout
     android:layout_width="wrap_content"

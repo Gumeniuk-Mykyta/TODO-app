@@ -3,10 +3,6 @@ package com.example.nikita.todo;
 import android.os.AsyncTask;
 import android.widget.ListView;
 
-import java.util.List;
-
-import static com.example.nikita.todo.MainActivityListView.taskListView;
-
 /**
  * Created by Nikita on 11/2/2016.
  */

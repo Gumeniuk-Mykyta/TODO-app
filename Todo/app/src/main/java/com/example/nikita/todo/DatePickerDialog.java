@@ -14,7 +14,7 @@ import static com.example.nikita.todo.MainActivityListView.fillList;
 import static com.example.nikita.todo.MainActivityListView.info;
 import static com.example.nikita.todo.MainActivityListView.isTaskBeingEdited;
 import static com.example.nikita.todo.MainActivityListView.nameOfTask;
-import static com.example.nikita.todo.MainActivityListView.tasksList;
+import static com.example.nikita.todo.MainActivityListView.uncompletedTasksList;
 import static com.example.nikita.todo.MainActivityListView.tasksListAdapter;
 
 /**
@@ -43,13 +43,13 @@ public class DatePickerDialog extends DialogFragment implements android.app.Date
         SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy");
         String taskDate = format.format(calendar.getTime());
         if (isTaskBeingEdited) {
-            tasksList.get(info.position).setDate(taskDate);
-            tasksList.get(info.position).setName(nameOfTask);
+            uncompletedTasksList.get(info.position).setDate(taskDate);
+            uncompletedTasksList.get(info.position).setName(nameOfTask);
             tasksListAdapter.notifyDataSetChanged();
         } else {
-            tasksList.add(new Task(nameOfTask, taskDate));
+            uncompletedTasksList.add(new Task(nameOfTask, taskDate));
         }
-        Log.i("taskList size :", String.valueOf(tasksList.size()));
+        Log.i("taskList size :", String.valueOf(uncompletedTasksList.size()));
         fillList();
     }
 
