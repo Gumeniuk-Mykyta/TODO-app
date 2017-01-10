@@ -1,14 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
-    signingConfigs {
-        config {
-            keyAlias 'DayPlannerApp'
-            keyPassword 'd1XKK4XRAM'
-            storeFile file('G:/app_keys/key_store.jks')
-            storePassword 'n1XKK4XRAM'
-        }
-    }
+   
     compileSdkVersion 24
     buildToolsVersion "24.0.2"
     defaultConfig {
