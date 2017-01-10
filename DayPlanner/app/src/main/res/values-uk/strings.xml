@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Планувальник справ</string>
+    <string name="add_task">Додати завдання</string>
+    <string name="edit_task">Змінити завдання</string>
+    <string name="change_status">Змінити статус</string>
+    <string name="delete_task">Видалити завдання</string>
+    <string name="all_tasks">Усі завдання</string>
+    <string name="todays_tasks">Сьогоднішні</string>
+    <string name="completed_tasks">Виконанні</string>
+    <string name="completed">Виконано</string>
+    <string name="in_progress">В процесі</string>
+    <string name="uncompleted">Не виконано</string>
+    <string name="date_of_task">Дата виконання завдання</string>
+    <string name="time_of_task">Час виконання завдання</string>
+    <string name="name_of_task">Назва завдання</string>
+    <string name="description_of_task">Опис завдання</string>
+    <string name="save_changes">Зберігти зміни</string>
+    <string name="mark_as_in_progress">Помітити як в процесі</string>
+    <string name="mark_as_completed">Помітити як виконане</string>
+    <string name="mark_as_uncompleted">Помітити як не виконане</string>
+    <string name="delete">Видалити</string>
+    <string name="edit">Змінити</string>
+    <string name="choose_status">Оберіть статус</string>
+    <string name="choose_an_action">Оберіть дію</string>
+</resources>

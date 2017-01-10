@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_add_or_edit_task"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.google.mykytagumeniuk.dayplanner.com.gmail.mykytagumeniuk.dayplanner.AddOrEditTaskActivity">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbarThumbHorizontal="@null"
+        android:scrollbarThumbVertical="@null"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/name_of_task" />
+
+            <EditText
+                android:id="@+id/nameOfTaskET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#00000000"
+                android:onClick="onClick"
+                android:text="" />
+
+            <View
+                android:id="@+id/lineBelowNameOfTask"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="2dp"
+                android:background="#000000"
+                android:onClick="onClick" />
+            android:layout_width="340dp"
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/date_of_task" />
+
+            <TextView
+                android:id="@+id/dateOfTaskTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:onClick="onClick"
+                android:text=""
+                android:textColor="#000000"
+                android:textSize="17dp" />
+
+            <View
+                android:id="@+id/lineBelowDateOfTask"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="2dp"
+                android:background="#000000"
+                android:onClick="onClick" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/time_of_task" />
+
+            <TextView
+                android:id="@+id/timeOfTaskTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:onClick="onClick"
+                android:text=""
+                android:textColor="#000000"
+                android:textSize="17dp" />
+
+            <View
+                android:id="@+id/lineBelowTimeOfTask"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="2dp"
+                android:background="#000000"
+                android:onClick="onClick" />
+            android:onClick="onClick"
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/description_of_task" />
+
+            <EditText
+                android:id="@+id/descriptionOfTaskET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#00000000"
+                android:onClick="onClick"
+                android:text="" />
+
+            <View
+                android:id="@+id/lineBelowDescriptionOfTask"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="2dp"
+                android:background="#000000"
+                android:onClick="onClick" />
+
+            <Button
+                android:id="@+id/addOrEditTaskButton"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:onClick="onClick"
+                android:text="@string/add_task" />
+            android:textColor="#ffffff"
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

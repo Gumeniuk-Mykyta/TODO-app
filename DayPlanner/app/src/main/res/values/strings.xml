@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Day Planner</string>
+    <string name="add_task">Add Task</string>
+    <string name="edit_task">Edit Task</string>
+    <string name="change_status">Change Status</string>
+    <string name="delete_task">Delete Task</string>
+    <string name="all_tasks">All Tasks</string>
+    <string name="todays_tasks">Today\'s Tasks</string>
+    <string name="completed_tasks">Completed</string>
+    <string name="completed">Completed</string>
+    <string name="in_progress">In progress</string>
+    <string name="uncompleted">Uncompleted</string>
+    <string name="date_of_task">Date of task</string>
+    <string name="time_of_task">Time of task</string>
+    <string name="name_of_task">Name of task</string>
+    <string name="description_of_task">Description of task</string>
+    <string name="save_changes">Save Changes</string>
+    <string name="mark_as_in_progress">Mark as In progress</string>
+    <string name="mark_as_completed">Mark as Completed</string>
+    <string name="mark_as_uncompleted">Mark as Uncompleted</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="choose_status">Choose the status</string>
+    <string name="choose_an_action">Choose an Action</string>
+
+</resources>

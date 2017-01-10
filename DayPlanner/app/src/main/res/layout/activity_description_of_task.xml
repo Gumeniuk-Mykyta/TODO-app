@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/descriptionActivityScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbarThumbHorizontal="@null"
+        android:scrollbarThumbVertical="@null"
+        android:scrollbars="none">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/descriptionActivityDateLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/date_of_task" />
+
+                <TextView
+                    android:id="@+id/descriptionActivityDateOfTaskTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:onClick="onClick"
+                    android:text="12.05.2015"
+                    android:textColor="#000000"
+                    android:textSize="17sp" />
+
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/descriptionActivityItemStatusIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="260dp"
+                android:layout_marginTop="0dp"
+                 />
+            android:src="@mipmap/new_uncompleted"
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/descriptionActivityTimeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/time_of_task" />
+
+                <TextView
+                    android:id="@+id/descriptionActiviyTimeOfTaskTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:onClick="onClick"
+                    android:text="12.05.2015"
+                    android:textColor="#000000"
+                    android:textSize="17sp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/descriptionActivityNameAndDescriptionOfTaskLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="50dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/descriptionActivityNameOfTaskTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Name of task"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/descriptionActivityDescriptionOfTaskTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/black"
+                    android:text="description of Task
+                bla bla bla blabla blabla blabla bla
+                bla bla bla blabla blabla blabla bla
+                bla bla bla blabla blabla blabla bla
+                bla bla bla blabla blabla blabla bla
+                bla bla bla blabla blabla blabla bla
+                bla bla bla blabla blabla blabla bla
+                bla bla bla blabla blabla blabla bla
+                bla bla bla blabla blabla blabla bla
+                bla bla bla blabla blabla blabla bla
+                bla bla bla blabla blabla blabla bla
+                bla bla bla blabla blabla blabla bla
+                bla bla bla blabla blabla blabla bla
+                bla bla bla blabla blabla blabla bla
+                bla bla bla blabla blabla blabla bla
+                bla bla bla blabla blabla blabla bla
+                bla bla bla blabla blabla blabla bla
+                bla bla bla blabla blabla blabla bla
+                bla bla bla blabla blabla blabla bla
+                bla bla bla blabla blabla blabla bla
+                bla bla bla blabla blabla blabla bla
+                bla bla bla blabla blabla blabla bla
+                bla bla bla blabla blabla blabla bla
+                bla bla bla blabla blabla blabla bla
+                bla bla bla blabla blabla blabla bla
+                bla bla bla blabla blabla blabla bla
+                bla bla bla blabla blabla blabla bla
+                bla bla bla blabla blabla blabla bla
+                bla bla bla blabla blabla blabla bla
+                v
+                bla bla bla blabla blabla blabla bla
+                bla bla bla blabla blabla blabla bla
+                bla bla bla blabla blabla blabla bla"
+                    android:textSize="17sp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_main_description_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="16dp"
+        android:clickable="true"
+        android:contextClickable="true"
+        android:elevation="6dp"
+        android:onClick="onFabButtonClick"
+        android:src="@drawable/ic_fab_main_horiz_24dp"
+        app:backgroundTint="@color/FABColor"
+        app:pressedTranslationZ="12dp" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="86dp"
+        android:layout_marginRight="20dp"
+        android:clickable="true"
+        android:elevation="6dp"
+        android:onClick="onFabButtonClick"
+        android:src="@drawable/ic_create_white_24dp"
+        app:backgroundTint="@color/FABColor"
+        app:fabSize="mini"
+        app:pressedTranslationZ="12dp" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="136dp"
+        android:layout_marginRight="20dp"
+        android:clickable="true"
+        android:elevation="6dp"
+        android:onClick="onFabButtonClick"
+        android:src="@drawable/ic_delete_white_24dp"
+        app:backgroundTint="@color/FABColor"
+        app:fabSize="mini"
+        app:pressedTranslationZ="12dp" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_mark_as_second"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="186dp"
+        android:layout_marginRight="20dp"
+        android:clickable="true"
+        android:elevation="6dp"
+        android:onClick="onFabButtonClick"
+        android:src="@drawable/ic_cached_white_24dp"
+        app:backgroundTint="@color/FABColor"
+        app:fabSize="mini"
+        app:pressedTranslationZ="12dp" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_mark_as_first"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="236dp"
+        android:layout_marginRight="20dp"
+        android:clickable="true"
+        android:elevation="6dp"
+        android:onClick="onFabButtonClick"
+        android:src="@drawable/ic_done_white_24dp"
+        app:backgroundTint="@color/FABColor"
+        app:fabSize="mini"
+        app:pressedTranslationZ="12dp" />
+
+    <TextView
+        android:id="@+id/tv_mark_as_first_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="65dp"
+        android:layout_marginBottom="240dp"
+        android:layout_gravity="bottom|end"
+        android:background="@drawable/fab_text_background"
+        android:elevation="6dp"
+        android:onClick="onFabButtonClick"
+        android:padding="5dp"
+        android:text="Mark as completed"
+        android:textColor="#ffffff" />
+
+
+    <TextView
+        android:id="@+id/tv_mark_as_second_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="65dp"
+        android:layout_marginBottom="190dp"
+        android:layout_gravity="bottom|end"
+        android:background="@drawable/fab_text_background"
+        android:elevation="6dp"
+        android:onClick="onFabButtonClick"
+        android:padding="5dp"
+        android:text="Mark as in progress"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:id="@+id/tv_delete_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="65dp"
+        android:layout_marginBottom="140dp"
+        android:layout_gravity="bottom|end"
+        android:background="@drawable/fab_text_background"
+        android:elevation="6dp"
+        android:onClick="onFabButtonClick"
+        android:padding="5dp"
+        android:text="@string/delete"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:id="@+id/tv_edit_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="65dp"
+        android:layout_marginBottom="90dp"
+        android:layout_gravity="bottom|end"
+        android:background="@drawable/fab_text_background"
+        android:elevation="6dp"
+        android:onClick="onFabButtonClick"
+        android:padding="5dp"
+        android:text="@string/edit"
+        android:textColor="#ffffff" />
+
+</android.support.design.widget.CoordinatorLayout>
