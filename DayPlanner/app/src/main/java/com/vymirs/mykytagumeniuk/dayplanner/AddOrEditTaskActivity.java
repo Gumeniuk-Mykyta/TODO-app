@@ -2,6 +2,7 @@ package com.vymirs.mykytagumeniuk.dayplanner;
 
 import android.app.Activity;
 import android.content.Intent;
+import java.util.Calendar;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.EditText;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 public class AddOrEditTaskActivity extends AppCompatActivity {
@@ -18,7 +20,7 @@ public class AddOrEditTaskActivity extends AppCompatActivity {
     public static TextView timeOfTaskTV;
     public static TextView dateOfTaskTV;
     public static EditText descriptionOfTaskET;
-    public static EditText nameOfTask;
+    public static EditText nameOfTaskET;
     public static View lineBelowTimeOfTask;
     public static View lineBelowDateOfTask;
     public static View lineBelowNameOfTask;
@@ -38,7 +40,7 @@ public class AddOrEditTaskActivity extends AppCompatActivity {
         lineBelowTimeOfTask = findViewById(R.id.lineBelowTimeOfTask);
         lineBelowNameOfTask = findViewById(R.id.lineBelowNameOfTask);
         lineBelowDescriptionOfTask = findViewById(R.id.lineBelowDescriptionOfTask);
-        nameOfTask = (EditText) findViewById(R.id.nameOfTaskET);
+        nameOfTaskET = (EditText) findViewById(R.id.nameOfTaskET);
         dateOfTaskTV = (TextView) findViewById(R.id.dateOfTaskTV);
         timeOfTaskTV = (TextView) findViewById(R.id.timeOfTaskTV);
         descriptionOfTaskET = (EditText) findViewById(R.id.descriptionOfTaskET);
@@ -48,12 +50,19 @@ public class AddOrEditTaskActivity extends AppCompatActivity {
             dateOfTaskTV.setText("");
             timeOfTaskTV.setText("");
             button.setText(R.string.add_task);
+            if (ActionBar.isTodaysTabSelected){
+                Calendar calendar = Calendar.getInstance();
+                SimpleDateFormat format = new SimpleDateFormat("yyyy.MM.dd");
+                String date = format.format(calendar.getTime());
+                dateOfTaskTV.setText(date);
+            }
         }
         if (!isAddTaskSelected) {
             button.setText(R.string.save_changes);
-            nameOfTask.setText(tasksList.get(idOfTask).getName());
+            nameOfTaskET.setText(tasksList.get(idOfTask).getName());
             dateOfTaskTV.setText(tasksList.get(idOfTask).getDate());
             timeOfTaskTV.setText(tasksList.get(idOfTask).getTime());
+            descriptionOfTaskET.setText(tasksList.get(idOfTask).getDescription());
         }
     }
 
@@ -75,7 +84,7 @@ public class AddOrEditTaskActivity extends AppCompatActivity {
 
                 } else if (!isAddTaskSelected) {
 
-                    tasksList.get(idOfTask).setName(nameOfTask.getText().toString());
+                    tasksList.get(idOfTask).setName(nameOfTaskET.getText().toString());
                     tasksList.get(idOfTask).setDate(dateOfTaskTV.getText().toString());
                     tasksList.get(idOfTask).setTime(timeOfTaskTV.getText().toString());
                     tasksList.get(idOfTask).setDescription(descriptionOfTaskET.getText().toString());
@@ -110,16 +119,18 @@ public class AddOrEditTaskActivity extends AppCompatActivity {
 
     private void addTask() {
         Task task = new Task();
-        task.setName(nameOfTask.getText().toString());
+        task.setName(nameOfTaskET.getText().toString());
         task.setDate(dateOfTaskTV.getText().toString());
         task.setTime(timeOfTaskTV.getText().toString());
         task.setDescription(descriptionOfTaskET.getText().toString());
         if (tasksList != MainActivityListView.completedTasksList) {
             task.setStatus(Task.Status.UNCOMPLETED);
+            MainActivityListView.uncompletedTasksList.add(task);
         } else {
             task.setStatus(Task.Status.COMPLETED);
+            MainActivityListView.completedTasksList.add(task);
         }
-        tasksList.add(task);
+//        tasksList.add(task);
         MainActivityListView.tasksListAdapter.notifyDataSetChanged();
         finish();
     }
